@@ -1,0 +1,26 @@
+{
+  "name": "GeoTweetApp",
+  "version": "1.0.0",
+  "authors": [
+    "Oriol Puig <oriol.puig90@gmail.com>"
+  ],
+  "description": "Project to get tweets by geolocation.",
+  "main": "gulpfile.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {
+    "angular": "~1.4.5",
+    "angular-ui-router": "ui-router#~0.2.15",
+    "angularjs-geolocation": "~0.1.1",
+    "bootstrap": "~3.3.5",
+    "jquery": "~2.1.4",
+    "oauth-ng": "~0.4.2"
+  }
+}

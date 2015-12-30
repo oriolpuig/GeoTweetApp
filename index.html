@@ -1,0 +1,53 @@
+<html data-ng-app="geoTweetApp">
+        <head>
+                <meta charset="utf-8">
+                <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                <title>GeoTweetApp</title>
+                        <meta name="description" content="">
+                <meta name="viewport" content="width=device-width">
+                        
+                <!-- CSS -->
+                        <!-- Bootstrap -->
+                        <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css">
+                        <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+                        
+                <!-- Scripts -->        
+                <!-- jQuery -->
+                <script src="./bower_components/jquery/dist/jquery.min.js"></script>
+                <script src="./bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+                <!-- AngulasJS modules -->
+                <script src="./bower_components/angular/angular.min.js"></script>
+                <script src="./bower_components/ngstorage/ngStorage.min.js"></script>
+                <!--<script src="./bower_components/oauth-ng/dist/oauth-ng.js"></script>-->
+                <!--<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular-sanitize.js"></script>-->
+                <script src="./bower_components/angularjs-geolocation/dist/angularjs-geolocation.min.js"></script>
+                <script src="./bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+                
+        </head>
+	<body data-ng-controller="rootController">
+                <div class="container">
+                        <div class="row">
+                                <div class="col-xs-3">
+                                        <div class="col-xs-3" ng-show="VM.currentUser">{{VM.currentUser.name}}</div>
+                                        <br />
+                                        <button ng-click="VM.signOut()" ng-show="VM.currentUser" id="signOut" type="button" class="btn btn-link">Sign Out</button>
+                                </div>
+                                <div class="col-xs-6" ui-view></div>
+                                <div class="col-xs-3"></div>
+                        </div>
+                </div>
+                <!-- AngulasJS App -->
+                <script src="app/app.js"></script>
+                <script src="app/shared/twitter/tweets.factory.js"></script>
+                <script src="app/shared/geolocation/geolocation.factory.js"></script>
+                <script src="app/shared/oauth/oauth.min.js"></script>
+                <script src="app/login/login.controller.js"></script>
+                <script src="app/root/root.controller.js"></script>
+                <script src="app/tweets/tweets.controller.js"></script>
+        
+                
+        
+                <!--<script src="app/components/navbar/gtNavbar.js"></script>
+                <script src="app/components/navbar/navbarCtrl.js"></script>-->
+	</body>
+</html>
